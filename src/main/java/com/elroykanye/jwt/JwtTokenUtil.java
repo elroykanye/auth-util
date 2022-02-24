@@ -18,8 +18,7 @@ import java.util.function.Function;
 @Slf4j
 @Getter @Setter
 public class JwtTokenUtil implements Serializable {
-    @Serial
-    private static final long serialVersionUID = -2550185165626007488L;
+    //private static final long serialVersionUID = -2550185165626007488L;
 
     private static long tokenValidity = 3600000; // 1h
 
