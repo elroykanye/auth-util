@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
 
         <org.projectlombok.version>1.18.22</org.projectlombok.version>
         <io.jsonwebtoken.version>0.9.1</io.jsonwebtoken.version>
@@ -43,4 +43,27 @@
             <version>${org.slf4j.version}</version>
         </dependency>
     </dependencies>
+
+
+    <profiles>
+        <profile>
+            <id>github</id>
+            <activation>
+                <property>
+                    <name>useGitHubPackages</name>
+                    <value>true</value>
+                </property>
+            </activation>
+
+            <distributionManagement>
+                <repository>
+                    <id>elroykanye</id>
+                    <name>Elroy Kanye</name>
+                    <url>https://maven.pkg.github.com/elroykanye/auth-util</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+
 </project>
